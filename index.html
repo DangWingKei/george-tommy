@@ -8,284 +8,317 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <!-- 全局样式 -->
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/fullpage/fullpage.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <!-- 页面样式 -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
 
 </head>
 
-<body id="page-top">
+<body>
     <!-- ******header****** -->
     <header>
-        <div class="logo"><img src="images/logo_black.png" class="img-responsive"></div>
-        <div class="rqcode hidden-xs"><img src="images/rqcode.png" class="img-responsive"></div>
+        <div class="top">
+            <div class="logo"><img src="images/logo_black.png" class="img-responsive"></div>
+            <div class="rqcode hidden-xs"><img src="images/rqcode.png" class="img-responsive"></div>
+            <!-- ******nav****** -->
+            <div class="overlay"></div>
+            <nav class="navbar navbar-default navbar-static-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="offcanvas">
+                            <span class="sr-only"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse sidebar-offcanvas">
+                        <ul class="nav navbar-nav">
+                            <li class="hidden">
+                                <a href="#"></a>
+                            </li>
+                            <li>
+                                <a class="active" href="#Home">首页 /</a>
+                            </li>
+                            <li>
+                                <a class="" href="#product">产品 /</a>
+                                <ul class="navbar-level2">
+                                    <li><a href="#clothes">服装产品 -</a></li>
+                                    <li><a href="#shoes">鞋类产品 -</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="" href="#moreBrands">更多产品 /</a>
+                            </li>
+                            <li>
+                                <a class="" href="#aboutUs">关于我们 /</a>
+                            </li>
+                            <li>
+                                <a class="" href="#contactUs">联系我们 /</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
         <p class="copyright"><small>LEAVE MORE RESOURCES FOR THE NEXT GENERATION</small></p>
-        <a class="back2top" href="#page-top"><img src="images/back2top.png" class="img-responsive"></a>
-
-        <!-- ******nav****** -->
-        <div class="overlay"></div>
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="offcanvas">
-                        <span class="sr-only"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div id="navbar" class="collapse navbar-collapse sidebar-offcanvas">
-                    <ul class="nav navbar-nav">
-                        <li class="hidden">
-                            <a href="#"></a>
-                        </li>
-                        <li>
-                            <a class="active" href="#Home">THE HOME PAGE /<span>首页</span></a>
-                        </li>
-                        <li>
-                            <a class="" href="#product">PRODUCT /<span>产品</span></a>
-                            <ul class="nav-level2">
-                                <li><a href="#clothes">CLOTHES /<span>衣服</span></a></li>
-                                <li><a href="#shoes">SHOES /<span>鞋子</span></a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="" href="#moreBrands">MORE BRANDS /<span>更多产品</span></a>
-                        </li>
-                        <li>
-                            <a class="" href="#aboutUs">ABOUT US /<span>关于我们</span></a>
-                        </li>
-                        <li>
-                            <a class="" href="#contantUs">CONTACT US /<span>联系我们</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <a class="back2top" href="#home"><img src="images/back2top.png" class="img-responsive"></a>
     </header>
 
     <!-- ******main****** -->
-    <section id="Home">
-        <div class="container-fluid">
-            <div class="row">
-                <ul class="home-nav">
-                    <li><a href="#Home" id="nav_homePage">T<i>HE HOME PAGE /<span>首页</span></i></a></li>
-                    <li class="cbg"><a href="#product" id="nav_product">P<i>RODUCT /<span>产品</span></i></a></li>
-                    <li class="cbg"><a href="#moreBrands" id="nav_moreBrands">M<i>ORE BRANDS /<span>更多产品</span></i></a>
-                    </li>
-                    <li class="cbg"><a href="#aboutUs" id="nav_aboutUs">A<i>BOUT US /<span>关于我们</span></i></a></li>
-                    <li class="cbg"><a href="#contantUs" id="nav_contantUs">C<i>ONTACT US /<span>联系我们</span></i></a>
-                    </li>
-                </ul>
-                <div class="site-name"></div>
+    <div id="main">
+        <div class="section">
+            <div class="container-fluid home-nav">
+                <div class="row">
+                    <ul>
+                        <li><a href="#Home" id="nav_homePage">T<i>HE HOME PAGE /<span>首页</span></i></a></li>
+                        <li class="cbg"><a href="#product" id="nav_product">P<i>RODUCT /<span>产品</span></i></a></li>
+                        <li class="cbg"><a href="#moreBrands" id="nav_moreBrands">M<i>ORE BRANDS
+                                    /<span>更多产品</span></i></a></li>
+                        <li class="cbg"><a href="#aboutUs" id="nav_aboutUs">A<i>BOUT US /<span>关于我们</span></i></a></li>
+                        <li class="cbg"><a href="#contactUs" id="nav_contactUs">C<i>ONTACT US /<span>联系我们</span></i></a>
+                        </li>
+                    </ul>
+                    <div class="site-name"></div>
+                </div>
             </div>
         </div>
-    </section>
-    <section id="product">
-        <div class="container-fluid">
-            <!-- clothes -->
-            <ul class="row h-pt" id="clothes">
-                <li class="col-xs-6 col-md-4">
-                    <a href="#"><img src="images/clothes01.png" class="img-responsive" alt="clothes">
-                        <div class="text">
-                            <span class="price">￥1299</span>
-                            <span class="name">耐克运动服合成纤维填充</span>
-                            <span class="description">Nike Sportswear Synthetic Fill Jacket</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="col-xs-6 col-md-4">
-                    <a href="#"><img src="images/clothes02.png" class="img-responsive" alt="clothes">
-                        <div class="text">
-                            <span class="price">￥199</span>
-                            <span class="name">耐克运动服合成纤维填充</span>
-                            <span class="description">Nike Sportswear Synthetic Fill Jacket</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="col-xs-6 col-md-4">
-                    <a href="#"><img src="images/clothes03.png" class="img-responsive" alt="clothes">
-                        <div class="text">
-                            <span class="price">￥599</span>
-                            <span class="name">耐克运动服</span>
-                            <span class="description">女士漏斗领1/2拉链上衣</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="col-xs-6 col-md-4">
-                    <a href="#"><img src="images/clothes01.png" class="img-responsive" alt="clothes">
-                        <div class="text">
-                            <span class="price">￥1299</span>
-                            <span class="name">耐克运动服合成纤维填充</span>
-                            <span class="description">Nike Sportswear Synthetic Fill Jacket</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="col-xs-6 col-md-4">
-                    <a href="#"><img src="images/clothes02.png" class="img-responsive" alt="clothes">
-                        <div class="text">
-                            <span class="price">￥199</span>
-                            <span class="name">耐克运动服合成纤维填充</span>
-                            <span class="description">Nike Sportswear Synthetic Fill Jacket</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="col-xs-6 col-md-4">
-                    <a href="#"><img src="images/clothes03.png" class="img-responsive" alt="clothes">
-                        <div class="text">
-                            <span class="price">￥599</span>
-                            <span class="name">耐克运动服</span>
-                            <span class="description">女士漏斗领1/2拉链上衣</span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            <!-- shoes -->
-            <ul class="row h-pt" id="shoes">
-                <li class="col-xs-6 col-md-4">
-                    <a href="#"><img src="images/shoes01.png" class="img-responsive" alt="shoes">
-                        <div class="text">
-                            <span class="price">￥699</span>
-                            <span class="name">Nike Air Max 270 React</span>
-                            <span class="description">Men's Shoe</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="col-xs-6 col-md-4">
-                    <a href="#"><img src="images/shoes02.png" class="img-responsive" alt="shoes">
-                        <div class="text">
-                            <span class="price">￥499</span>
-                            <span class="name">Nike Air Force 1 Mid '07</span>
-                            <span class="description">Men's Shoe</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="col-xs-6 col-md-4">
-                    <a href="#"><img src="images/shoes03.png" class="img-responsive" alt="shoes">
-                        <div class="text">
-                            <span class="price">￥679</span>
-                            <span class="name">Nike Air Force 1</span>
-                            <span class="description">Men's Shoe</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="col-xs-6 col-md-4">
-                    <a href="#"><img src="images/shoes01.png" class="img-responsive" alt="shoes">
-                        <div class="text">
-                            <span class="price">￥699</span>
-                            <span class="name">Nike Air Max 270 React</span>
-                            <span class="description">Men's Shoe</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="col-xs-6 col-md-4">
-                    <a href="#"><img src="images/shoes02.png" class="img-responsive" alt="shoes">
-                        <div class="text">
-                            <span class="price">￥499</span>
-                            <span class="name">Nike Air Force 1 Mid '07</span>
-                            <span class="description">Men's Shoe</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="col-xs-6 col-md-4">
-                    <a href="#"><img src="images/shoes03.png" class="img-responsive" alt="shoes">
-                        <div class="text">
-                            <span class="price">￥679</span>
-                            <span class="name">Nike Air Force 1</span>
-                            <span class="description">Men's Shoe</span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
+        <div class="section section1 animate">
+            <div class="container-fluid product h-pt">
+                <!-- clothes -->
+                <ul class="row" id="clothes">
+                    <li class="col-xs-6 col-md-4">
+                        <a href="#"><img src="images/clothes01.png" class="img-responsive" alt="clothes">
+                            <div class="text">
+                                <span class="price">￥1299</span>
+                                <span class="name">耐克运动服合成纤维填充</span>
+                                <span class="description">Nike Sportswear Synthetic Fill Jacket</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="col-xs-6 col-md-4">
+                        <a href="#"><img src="images/clothes02.png" class="img-responsive" alt="clothes">
+                            <div class="text">
+                                <span class="price">￥199</span>
+                                <span class="name">耐克运动服合成纤维填充</span>
+                                <span class="description">Nike Sportswear Synthetic Fill Jacket</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="col-xs-6 col-md-4">
+                        <a href="#"><img src="images/clothes03.png" class="img-responsive" alt="clothes">
+                            <div class="text">
+                                <span class="price">￥599</span>
+                                <span class="name">耐克运动服</span>
+                                <span class="description">女士漏斗领1/2拉链上衣</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="col-xs-6 col-md-4">
+                        <a href="#"><img src="images/clothes01.png" class="img-responsive" alt="clothes">
+                            <div class="text">
+                                <span class="price">￥1299</span>
+                                <span class="name">耐克运动服合成纤维填充</span>
+                                <span class="description">Nike Sportswear Synthetic Fill Jacket</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="col-xs-6 col-md-4">
+                        <a href="#"><img src="images/clothes02.png" class="img-responsive" alt="clothes">
+                            <div class="text">
+                                <span class="price">￥199</span>
+                                <span class="name">耐克运动服合成纤维填充</span>
+                                <span class="description">Nike Sportswear Synthetic Fill Jacket</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="col-xs-6 col-md-4">
+                        <a href="#"><img src="images/clothes03.png" class="img-responsive" alt="clothes">
+                            <div class="text">
+                                <span class="price">￥599</span>
+                                <span class="name">耐克运动服</span>
+                                <span class="description">女士漏斗领1/2拉链上衣</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- shoes -->
+                <ul class="row" id="shoes">
+                    <li class="col-xs-6 col-md-4">
+                        <a href="#"><img src="images/shoes01.png" class="img-responsive" alt="shoes">
+                            <div class="text">
+                                <span class="price">￥699</span>
+                                <span class="name">Nike Air Max 270 React</span>
+                                <span class="description">Men's Shoe</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="col-xs-6 col-md-4">
+                        <a href="#"><img src="images/shoes02.png" class="img-responsive" alt="shoes">
+                            <div class="text">
+                                <span class="price">￥499</span>
+                                <span class="name">Nike Air Force 1 Mid '07</span>
+                                <span class="description">Men's Shoe</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="col-xs-6 col-md-4">
+                        <a href="#"><img src="images/shoes03.png" class="img-responsive" alt="shoes">
+                            <div class="text">
+                                <span class="price">￥679</span>
+                                <span class="name">Nike Air Force 1</span>
+                                <span class="description">Men's Shoe</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="col-xs-6 col-md-4">
+                        <a href="#"><img src="images/shoes01.png" class="img-responsive" alt="shoes">
+                            <div class="text">
+                                <span class="price">￥699</span>
+                                <span class="name">Nike Air Max 270 React</span>
+                                <span class="description">Men's Shoe</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="col-xs-6 col-md-4">
+                        <a href="#"><img src="images/shoes02.png" class="img-responsive" alt="shoes">
+                            <div class="text">
+                                <span class="price">￥499</span>
+                                <span class="name">Nike Air Force 1 Mid '07</span>
+                                <span class="description">Men's Shoe</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="col-xs-6 col-md-4">
+                        <a href="#"><img src="images/shoes03.png" class="img-responsive" alt="shoes">
+                            <div class="text">
+                                <span class="price">￥679</span>
+                                <span class="name">Nike Air Force 1</span>
+                                <span class="description">Men's Shoe</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </section>
-    <section id="moreBrands" class="h-pt">
-        <div class="container-fluid">
-            <h2><strong>多品类集合</strong>
-                <p>打造覆盖式潮流频道</p>
-            </h2>
-            <ul class="row">
-                <li class="col-sm-4"><a href="#"><img src="images/brands_img01.png" class="img-responsive"></a></li>
-                <li class="col-sm-4"><a href="#"><img src="images/brands_img02.png" class="img-responsive"></a></li>
-                <li class="col-sm-4"><a href="#"><img src="images/brands_img03.png" class="img-responsive"></a></li>
-            </ul>
+        <div class="section section2">
+            <div class="container-fluid morebrands h-pt">
+                <div class="title animate"><strong>多品类集合</strong>
+                    <p>打造覆盖式潮流频道</p>
+                </div>
+                <ul class="row animate">
+                    <li class="col-md-3"><a href="#"><span>>>查看更多</span><img src="images/brands_img01.png"
+                                class="img-responsive"></a></li>
+                    <li class="col-md-3"><a href="#"><span>>>查看更多</span><img src="images/brands_img04.png"
+                                class="img-responsive"></a></li>
+                    <li class="col-md-3"><a href="#"><span>>>查看更多</span><img src="images/brands_img02.png"
+                                class="img-responsive"></a></li>
+                    <li class="col-md-3"><a href="#"><span>>>查看更多</span><img src="images/brands_img03.png"
+                                class="img-responsive"></a></li>
+                </ul>
+            </div>
         </div>
-    </section>
-    <section id="aboutUs" class="h-pt">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <div class="col-sm-6 col-sm-push-6">
-                        <h1 class="en-title text-right"><strong>COMPANY<br />INTRODUCTION</strong></h1>
-                        <h3 class="cn-title text-right"><strong>公司简介</strong></h3>
-                        <p>中山市霞湖世家服饰有限公司，1997年成立于中国服装名镇中山市沙溪镇，创立至今已有23年历史。公司主要经营服装加工与销售、服装印花；服装及配件、布料与棉纱等。</p>
-                        <p> 三尺青锋怀天下，一骑白马开吾疆。霞湖世家创始人T恤大叔郭长棋先生，带领1000多名员工，二十三年的风雨兼程， 从考察市场、面料研发到T恤设计、T恤生产，秉承工匠精神，从未停下脚步。
-                        </p>
-                        <p>一生热爱T恤，一生做好一件事，是霞湖世家人的不变的信念。创办至今，霞湖世家设计与智造的T恤已累计突破了1亿件。已为劲霸男装，海澜之家，七匹狼等国内几百个品牌做过T恤设计与加工，在国内服装业属于名副其实的T恤专家。此外，公司已获得中国针织服装（T恤衫）销售十强，广东服装百强企业，中国T恤衫名牌等荣誉称号。
-                        </p>
+        <div class="section section3">
+            <div class="container-fluid aboutus h-pt">
+                <div class="row">
+                    <div class="col-md-4 animate left-text">
+                        <div class="title"><strong>公司介绍</strong>
+                            <p>/ COMPANY INTRODUCTION</p>
+                        </div>
+                        <div class="content">
+                            <p>中山市霞湖世家服饰有限公司，1997年成立于中国服装名镇中山市沙溪镇，创立至今已有23年历史。公司主要经营服装加工与销售、服装印花；服装及配件、布料与棉纱等。</p>
+                            <p> 三尺青锋怀天下，一骑白马开吾疆。霞湖世家创始人T恤大叔郭长棋先生，带领1000多名员工，二十三年的风雨兼程，
+                                从考察市场、面料研发到T恤设计、T恤生产，秉承工匠精神，从未停下脚步。</p>
+                            <p>一生热爱T恤，一生做好一件事，是霞湖世家人的不变的信念。创办至今，霞湖世家设计与智造的T恤已累计突破了1亿件。已为劲霸男装，海澜之家，七匹狼等国内几百个品牌做过T恤设计与加工，在国内服装业属于名副其实的T恤专家。此外，公司已获得中国针织服装（T恤衫）销售十强，广东服装百强企业，中国T恤衫名牌等荣誉称号。
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-sm-6 col-sm-pull-6">
-                        <img src="images/about_us_img.png" class="img-responsive pull-right">
+                    <div class="col-md-8 animate right-video">
+                        <div class="video">
+                            <video controls>
+                                <source src="video/video.mp4" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section id="contantUs" class="h-pt">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-10 col-sm-offset-1">
-                    <div class="col-sm-6">
+        <div class="section section4">
+            <div class="container-fluid contactus h-pt">
+                <div class="row">
+                    <div class="col-sm-6 animate left-img">
                         <img src="images/contact_us_img.png" class="img-responsive pull-right">
                     </div>
                     <div class="col-sm-6">
-                        <h2><strong>雷米（福建）文化传播有限责任公司</strong></h2>
-                        <h2><strong>中国区招商火爆进行中</strong></h2>
-                        <div class="title">联系电话</div>
-                        <div class="contect">王总&nbsp;13338581331</div>
-                        <div class="contect">吴总&nbsp;18613137966</div>
-                        <div>&nbsp;</div>
-                        <div class="contect">陈先生&nbsp;13675972897</div>
-                        <div class="contect">许先生&nbsp;18050903456</div>
-                        <div class="contect">黄先生&nbsp;18106986777</div>
-                        <div class="title">联系地址</div>
-                        <div class="contect">福建省晋江市青阳区洪山路202号一百文创园5楼</div>
+                        <div class="right-text animate right-text">
+                            <div class="title">雷米（福建）文化传播有限责任公司</div>
+                            <div class="title"><strong>中国区招商火爆进行中</strong></div>
+                            <div class="s-title">联系电话</div>
+                            <div class="content">王总&nbsp;13338581331</div>
+                            <div class="content">吴总&nbsp;18613137966</div>
+                            <div>&nbsp;</div>
+                            <div class="s-title">联系地址</div>
+                            <div class="content">福建省晋江市青阳区洪山路202号一百文创园5楼</div>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <!-- ******footer****** -->
     <!-- Javascript -->
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <!-- <script type="text/javascript" src="js/cbpAnimatedHeader.js"></script> -->
-    <script type="text/javascript" src="js/smooth-scroll.js"></script>
+    <script type="text/javascript" src="js/scrolloverflow.js"></script>
+    <script type="text/javascript" src="plugins/fullpage/fullpage.js"></script>
     <script type="text/javascript" src="js/offcanvas.js"></script>
-
     <script>
-        // 让头部滚动到第二页才显示
-        $(window).scroll(function () {
-            if ($(document).scrollTop() > 100) {//滚动到100px出现，可设定位视窗高度$(window).height()
-                $('header').addClass('show');
-            }
-            else if ($(document).scrollTop() <= 0) {
-                $('header').removeClass('show');
-            }
-        });
         $(function () {
+            $('#main').fullpage({
+                anchors: ['Home', 'product', 'moreBrands', 'aboutUs', 'contactUs'],
+                scrollOverflow: true,
+                // lockAnchors:true
+                afterLoad: function (origin, destination, direction) {
+                    if (destination.index == 1) {
+                        $('.section1').addClass('animated fadeIn')
+                    } else if (destination.index == 2) {
+                        $('.section2').find('.title').addClass('animated fadeInDown')
+                        $('.section2').find('.row').addClass('animated fadeInUp')
+                    } else if (destination.index == 3) {
+                        $('.section3').find('.left-text').addClass('animated fadeInLeft')
+                        $('.section3').find('.right-video').addClass('animated fadeInRight')
+                    } else if (destination.index == 4) {
+                        $('.section4').find('.left-img').addClass('animated fadeInLeft')
+                        $('.section4').find('.right-text').addClass('animated fadeInRight')
+                    }
+                },
+                onLeave: function (origin, destination, direction) {
+                    if (destination.index == 1) {
+                        $('.section1').removeClass('animated fadeIn')
+                    } else if (destination.index == 2) {
+                        $('.section2').find('.title').removeClass('animated fadeInDown')
+                        $('.section2').find('.row').removeClass('animated fadeInUp')
+                    } else if (destination.index == 3) {
+                        $('.section3').find('.left-text').removeClass('animated fadeInLeft')
+                        $('.section3').find('.right-video').removeClass('animated fadeInRight')
+                    } else if (destination.index == 4) {
+                        $('.section4').find('.left-img').removeClass('animated fadeInLeft')
+                        $('.section4').find('.right-text').removeClass('animated fadeInRight')
+                    }
+                },
+            });
             // Home页面导航按钮切换背景
             $('.home-nav .cbg a').hover(
                 function () {
-                    $(this).parents('.home-nav').addClass('contrary').css('background', 'url(images/' + ($(this).attr('id')) + '.jpg) left top no-repeat')
+                    $(this).parents('.home-nav').addClass('contrary').css({ 'background': 'url(images/' + ($(this).attr('id')) + '.jpg) left top no-repeat', 'background-size': '100%' })
                 }, function () {
-                    $(this).parents('.home-nav').removeClass('contrary').css('background', 'url(images/nav_home.jpg) left top no-repeat')
+                    $(this).parents('.home-nav').removeClass('contrary').css({ 'background': 'url(images/nav_home.jpg) left top no-repeat', 'background-size': '100%' })
                 })
         });
     </script>
-
 </body>
 
 </html>
