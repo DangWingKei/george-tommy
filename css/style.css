@@ -70,19 +70,19 @@ body.active{overflow:hidden;}
 @media(min-width:768px){
     /* common */
     .h-pt{padding-top:5vw;}
-    .product,.morebrands,.aboutus,.contactus{padding-left: 4.2vw;padding-right: 4.2vw;}
+    .morebrands,.aboutus,.contactus{padding-left: 7.8vw;padding-right: 7.8vw;}
      /* nav */
     .overlay.active{background:rgba(0, 0, 0, 0);}
     .navbar{height:4.9vw;}
     .navbar .container-fluid .navbar-header{position:fixed;top:50%;}
-    .navbar .container-fluid > .navbar-collapse{width:20vw;}
+    .navbar .container-fluid > .navbar-collapse{width:20vw;-webkit-transition:all .8s;-moz-transition:all .8s;-o-transition:all .8s;transition:all .8s;}
     .navbar .container-fluid > .navbar-collapse.active{padding-left: 5vw;}
     .navbar-default .navbar-nav{margin:5vw 0;padding:0;width: 100%;}
     .navbar-nav > li{float:none;}
     .navbar-default .navbar-nav > li{padding: 2vw 0;}
     .navbar-default .navbar-nav > li > a{font-size:1.6vw;font-weight:bold;padding:0 .5vw;color:#000;}
     .navbar-default .navbar-nav > li > a > span{font-size:1vw;padding-left:1vw;}
-    .navbar-toggle{display:block;margin: 1vw;}
+    .navbar .navbar-toggle,.navbar .navbar-toggle:focus, .navbar .navbar-toggle:hover{display:block;margin: 1vw;}
     .navbar-level2 li{padding: 1vw 0;}
     .navbar-level2 li a{font-size:1.2vw;margin:2vw 1vw;}
     /* header */
@@ -116,4 +116,26 @@ body.active{overflow:hidden;}
     .contactus .right-text .title{font-size: 2.1vw;}
     .contactus .right-text .s-title{font-size: 1.4vw;font-weight: bold;margin-top: 2vw;}
     .contactus .right-text .content{font-size: 1.2vw;margin-top: 1vw;}
+
+    .moreBrands01,.moreBrands02,.moreBrands03,.moreBrands04{padding-left: 7.8vw;padding-right: 7.8vw;}
+    /* page morebrands01 */
+    .moreBrands01 .logo01{margin-top: 2.6vw;}
+    .moreBrands01 .logo02{margin-top: 5.2vw;}
+    .moreBrands01 .text01{margin-top: 5.2vw;font-size: 1.6vw;font-weight: bold;}
+    .moreBrands01 .text01::before,.moreBrands01 .text01::after{content: '';display: block;margin: 2vw 0;background: #000;width: 1vw;height: 0.2vw;}
+    .moreBrands01 .text02{font-size: 1.2vw;}
+    /* page morebrands02 */
+    .moreBrands02 .logo02{margin-top: 5.2vw;}
+    .moreBrands02 .text01{font-size: 1.6vw;font-weight: bold;}
+    .moreBrands02 .text01::before,.moreBrands02 .text01::after{content: '';display: block;margin: 1vw 0;background: #000;width: 1vw;height: 0.2vw;}
+    .moreBrands02 .text02{font-size: 1.2vw;}
+    .moreBrands02 .image img{margin: auto;}
+    /* page morebrands03 */
+    .moreBrands03 .logo02{margin-top: 4.2vw;}
+    .moreBrands03 .text01{font-size: 1.6vw;font-weight: bold;}
+    .moreBrands03 .text01::before,.moreBrands03 .text01::after{content: '';display: block;margin: 1vw 0;background: #000;width: 1vw;height: 0.2vw;}
+    .moreBrands03 .text02{font-size: 1.2vw;}
+    .moreBrands03 .image img{margin: auto;}
+
+
 }
