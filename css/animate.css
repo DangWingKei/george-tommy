@@ -3567,12 +3567,30 @@
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
+.animated.delay-02s {
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
+}
+.animated.delay-04s {
+  -webkit-animation-delay: .4s;
+  animation-delay: .4s;
+}
+.animated.delay-06s {
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s;
+}
+.animated.delay-08s {
+  -webkit-animation-delay: .8s;
+  animation-delay: .8s;
+}
 .animated.delay-1s {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
-
+.animated.delay-12s {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
 .animated.delay-2s {
   -webkit-animation-delay: 2s;
   animation-delay: 2s;

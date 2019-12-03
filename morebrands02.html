@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <title>GEORGE TOMMY - 乔治汤米</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!-- 全局样式 -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/fullpage/fullpage.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+</head>
+
+<body>
+    <!-- ******header****** -->
+    <header>
+        <div class="top">
+            <div class="logo"><img src="images/logo_black.png" class="img-responsive"></div>
+            <div class="rqcode hidden-xs"><img src="images/rqcode.png" class="img-responsive"></div>
+            <!-- ******nav****** -->
+            <div class="overlay"></div>
+            <nav class="navbar navbar-default navbar-static-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="offcanvas">
+                            <span class="sr-only"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse sidebar-offcanvas">
+                        <ul class="nav navbar-nav">
+                            <li class="hidden">
+                                <a href="#"></a>
+                            </li>
+                            <li>
+                                <a class="animate delay-02s" href="index.html#Home">首页 /</a>
+                            </li>
+                            <li>
+                                <a class="animate delay-04s" href="index.html#product">产品 /</a>
+                                <ul class="navbar-level2 animate delay-06s">
+                                    <li><a class="" href="#">服装产品 -</a></li>
+                                    <li><a class="" href="#">鞋类产品 -</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="animate delay-08s" href="index.html#moreBrands">更多产品 /</a>
+                            </li>
+                            <li>
+                                <a class="animate delay-1s" href="index.html#aboutUs">关于我们 /</a>
+                            </li>
+                            <li>
+                                <a class="animate delay-12s" href="index.html#contactUs">联系我们 /</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <p class="copyright"><small>LEAVE MORE RESOURCES FOR THE NEXT GENERATION</small></p>
+        <!-- <a class="back2top" href="#Home"><img src="images/back2top.png" class="img-responsive"></a> -->
+    </header>
+
+    <!-- ******main****** -->
+    <div id="main">
+        <div class="section">
+            <div class="container-fluid moreBrands02 h-pt">
+                <div class="row">
+                    <div class="col-md-5 animated zoomIn">
+                        <div class="logo01"><img src="images/morebrands02_logo01.png" class="img-responsive"></div>
+                        <div class="logo02"><img src="images/morebrands02_logo02.png" class="img-responsive"></div>
+                        <div class="text01">
+                            <p>为新时代消费者</p>
+                            <p>探索美好生活的时尚品牌</p>
+                        </div>
+                        <div class="text02">NEO SUPREME以其独有的品牌态度，带着对美好生活的探索，打造出别具一格的创意产品，不断为新世代年轻的消费者提供展现自我价值的消费舞台。
+                        </div>
+                    </div>
+                    <div class="col-md-7 animated zoomIn">
+                        <div class="image">
+                            <img src="images/morebrands02_img.png" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ******footer****** -->
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/scrolloverflow.js"></script>
+    <script type="text/javascript" src="plugins/fullpage/fullpage.js"></script>
+    <script type="text/javascript" src="js/offcanvas.js"></script>
+    <script>
+        $(function () {
+            $('#main').fullpage({
+                anchors: ['moreBrands02'],
+                scrollOverflow: true,
+                // lockAnchors:true
+            });
+
+            $('.overlay, .navbar-toggle, #navbar .animate').on('click', function () {
+                if ($('#navbar').hasClass('active')) {
+                    $('#navbar').find('.animate').addClass('animated fadeInLeft')
+                } else {
+                    $('#navbar').find('.animate').removeClass('animated fadeInLeft')
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>
