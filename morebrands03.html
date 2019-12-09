@@ -21,11 +21,11 @@
     <!-- ******header****** -->
     <header>
         <div class="top">
-            <div class="logo"><img src="images/logo_black.png" class="img-responsive"></div>
-            <div class="rqcode hidden-xs"><img src="images/rqcode.png" class="img-responsive"></div>
             <!-- ******nav****** -->
             <div class="overlay"></div>
             <nav class="navbar navbar-default navbar-static-top">
+                <div class="logo"><a href="index.html"><img src="images/logo_black.png" class="img-responsive"></a></div>
+                <div class="rqcode hidden-xs"><img src="images/rqcode.png" class="img-responsive"></div>
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="offcanvas">
@@ -41,23 +41,23 @@
                                 <a href="#"></a>
                             </li>
                             <li>
-                                <a class="animate delay-02s" href="index.html#Home">首页 /</a>
+                                <a class="animate delay-02s" href="index.html">首页 /</a>
                             </li>
                             <li>
-                                <a class="animate delay-04s" href="index.html#product">产品 /</a>
+                                <a class="animate delay-04s" href="product.html">产品 /</a>
                                 <ul class="navbar-level2 animate delay-06s">
-                                    <li><a class="" href="#">服装产品 -</a></li>
-                                    <li><a class="" href="#">鞋类产品 -</a></li>
+                                    <li><a class="" href="product.html#clothes">服装产品 -</a></li>
+                                    <li><a class="" href="product.html#shoes">鞋类产品 -</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a class="animate delay-08s" href="index.html#moreBrands">更多产品 /</a>
+                                <a class="animate delay-08s" href="moreBrands.html">更多产品 /</a>
                             </li>
                             <li>
-                                <a class="animate delay-1s" href="index.html#aboutUs">关于我们 /</a>
+                                <a class="animate delay-1s" href="aboutUs.html">关于我们 /</a>
                             </li>
                             <li>
-                                <a class="animate delay-12s" href="index.html#contactUs">联系我们 /</a>
+                                <a class="animate delay-12s" href="contactUs.html">联系我们 /</a>
                             </li>
                         </ul>
                     </div>
@@ -65,7 +65,6 @@
             </nav>
         </div>
         <p class="copyright"><small>LEAVE MORE RESOURCES FOR THE NEXT GENERATION</small></p>
-        <!-- <a class="back2top" href="#Home"><img src="images/back2top.png" class="img-responsive"></a> -->
     </header>
 
     <!-- ******main****** -->
@@ -95,24 +94,15 @@
     <!-- Javascript -->
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/scrolloverflow.js"></script>
     <script type="text/javascript" src="plugins/fullpage/fullpage.js"></script>
     <script type="text/javascript" src="js/offcanvas.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
     <script>
         $(function () {
             $('#main').fullpage({
                 anchors: ['moreBrands03'],
-                scrollOverflow: true,
                 // lockAnchors:true
             });
-
-            $('.overlay, .navbar-toggle, #navbar .animate').on('click', function () {
-                if ($('#navbar').hasClass('active')) {
-                    $('#navbar').find('.animate').addClass('animated fadeInLeft')
-                } else {
-                    $('#navbar').find('.animate').removeClass('animated fadeInLeft')
-                }
-            })
         });
     </script>
 </body>

@@ -24,9 +24,9 @@
             <!-- ******nav****** -->
             <div class="overlay"></div>
             <nav class="navbar navbar-default navbar-static-top">
-                <div class="logo"><a href="index.html"><img src="images/logo_black.png" class="img-responsive"></a></div>
-                <div class="rqcode hidden-xs"><img src="images/rqcode.png" class="img-responsive"></div>
                 <div class="container-fluid">
+                    <div class="logo"><a href="index.html"><img src="images/logo_black.png" class="img-responsive"></a></div>
+                    <div class="rqcode hidden-xs"><img src="images/rqcode.png" class="img-responsive"></div>
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="offcanvas">
                             <span class="sr-only"></span>
@@ -70,24 +70,16 @@
     <!-- ******main****** -->
     <div id="main">
         <div class="section">
-            <div class="container-fluid moreBrands02 h-pt">
-                <div class="row">
-                    <div class="col-md-5 animated zoomIn">
-                        <div class="logo01"><img src="images/morebrands02_logo01.png" class="img-responsive"></div>
-                        <div class="logo02"><img src="images/morebrands02_logo02.png" class="img-responsive"></div>
-                        <div class="text01">
-                            <p>为新时代消费者</p>
-                            <p>探索美好生活的时尚品牌</p>
-                        </div>
-                        <div class="text02">NEO SUPREME以其独有的品牌态度，带着对美好生活的探索，打造出别具一格的创意产品，不断为新世代年轻的消费者提供展现自我价值的消费舞台。
-                        </div>
-                    </div>
-                    <div class="col-md-7 animated zoomIn">
-                        <div class="image">
-                            <img src="images/morebrands02_img.png" class="img-responsive">
-                        </div>
-                    </div>
+            <div class="container-fluid morebrands h-pt">
+                <div class="title animated fadeInDown"><strong>多品类集合</strong>
+                    <p>打造覆盖式潮流频道</p>
                 </div>
+                <ul class="row animated fadeInUp">
+                    <li class="col-xs-6 col-md-3"><a href="morebrands01.html"><span>>>查看更多</span><img src="images/brands_img01.png"class="img-responsive"></a></li>
+                    <li class="col-xs-6 col-md-3"><a href="morebrands04.html"><span>>>查看更多</span><img src="images/brands_img04.png"class="img-responsive"></a></li>
+                    <li class="col-xs-6 col-md-3"><a href="morebrands02.html"><span>>>查看更多</span><img src="images/brands_img02.png"class="img-responsive"></a></li>
+                    <li class="col-xs-6 col-md-3"><a href="morebrands03.html"><span>>>查看更多</span><img src="images/brands_img03.png"class="img-responsive"></a></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -101,7 +93,8 @@
     <script>
         $(function () {
             $('#main').fullpage({
-                anchors: ['moreBrands02'],
+                anchors: ['moreBrands'],
+                autoScrolling: false,
                 // lockAnchors:true
             });
         });
