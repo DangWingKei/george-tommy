@@ -17,16 +17,17 @@
 
 </head>
 
-<body>
+<body id="Home">
     <!-- ******header****** -->
     <header>
         <div class="top">
             <!-- ******nav****** -->
             <div class="overlay"></div>
             <nav class="navbar navbar-default navbar-static-top">
-                <div class="logo"><a href="index.html"><img src="images/logo_black.png" class="img-responsive"></a></div>
-                <div class="rqcode hidden-xs"><img src="images/rqcode.png" class="img-responsive"></div>
                 <div class="container-fluid">
+                    <div class="logo"><a href="index.html"><img src="images/logo_black.png" class="img-responsive"></a>
+                    </div>
+                    <div class="rqcode hidden-xs"><img src="images/rqcode.png" class="img-responsive"></div>
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="offcanvas">
                             <span class="sr-only"></span>
@@ -65,29 +66,17 @@
             </nav>
         </div>
         <p class="copyright"><small>LEAVE MORE RESOURCES FOR THE NEXT GENERATION</small></p>
+        <a class="back2top" href="#Home"><img src="images/back2top.png" class="img-responsive"></a>
     </header>
 
     <!-- ******main****** -->
     <div id="main">
-        <div class="section">
-            <div class="container-fluid moreBrands02 h-pt">
-                <div class="row">
-                    <div class="col-md-5 animated zoomIn">
-                        <div class="logo01"><img src="images/morebrands02_logo01.png" class="img-responsive"></div>
-                        <div class="logo02"><img src="images/morebrands02_logo02.png" class="img-responsive"></div>
-                        <div class="text01">
-                            <p>为新时代消费者</p>
-                            <p>探索美好生活的时尚品牌</p>
-                        </div>
-                        <div class="text02">NEO SUPREME以其独有的品牌态度，带着对美好生活的探索，打造出别具一格的创意产品，不断为新世代年轻的消费者提供展现自我价值的消费舞台。
-                        </div>
-                    </div>
-                    <div class="col-md-7 animated zoomIn">
-                        <div class="image">
-                            <img src="images/morebrands02_img.png" class="img-responsive">
-                        </div>
-                    </div>
-                </div>
+        <div class="section animated fadeIn delay-04s">
+            <div class="container-fluid product">
+                <!-- clothes -->
+                <ul class="row h-pt" id="clothes"></ul>
+                <!-- shoes -->
+                <ul class="row h-pt" id="shoes"></ul>
             </div>
         </div>
     </div>
@@ -95,15 +84,57 @@
     <!-- Javascript -->
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/smooth-scroll.js"></script>
     <script type="text/javascript" src="plugins/fullpage/fullpage.js"></script>
     <script type="text/javascript" src="js/offcanvas.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <script>
         $(function () {
             $('#main').fullpage({
-                anchors: ['moreBrands02'],
+                anchors: ['product'],
+                autoScrolling: false,
+                css3: true,
+                fitToSection: false,
                 // lockAnchors:true
             });
+            $.ajax({
+                type: 'get',
+                url: 'data.json',
+                dataType: 'json',
+                success: function (res, status) {
+                    add2html(res);
+                }
+            });
+            function add2html(r) {
+                $.each(r, function (index, obj) {
+                    if (obj.cid == 'clothes') {
+                        $('#clothes').append(
+                            "<li class='col-xs-6 col-md-4'>" +
+                            "<a href='product_detail.html?id=" + obj.id + "'><img src='" + obj.img + "' class='img-responsive'>" +
+                            "<div class='text'>" +
+                            "<span class='price'>￥" + obj.price + "</span>" +
+                            "<span class='name'>" + obj.name + "</span>" +
+                            "<span class='description'>" + obj.description + "</span>" +
+                            "</div>" +
+                            "</a>" +
+                            "</li>"
+                        );
+                    } else if (obj.cid == 'shoes') {
+                        $('#shoes').append(
+                            "<li class='col-xs-6 col-md-4'>" +
+                            "<a href='product_detail.html?id=" + obj.id + "'><img src='" + obj.img + "' class='img-responsive'>" +
+                            "<div class='text'>" +
+                            "<span class='price'>￥" + obj.price + "</span>" +
+                            "<span class='name'>" + obj.name + "</span>" +
+                            "<span class='description'>" + obj.description + "</span>" +
+                            "</div>" +
+                            "</a>" +
+                            "</li>"
+                        );
+                    }
+
+                })
+            }
         });
     </script>
 </body>

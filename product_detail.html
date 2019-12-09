@@ -14,6 +14,7 @@
     <!-- 页面样式 -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="plugins/Smoothproducts/css/smoothproducts.css">
 
 </head>
 
@@ -24,9 +25,10 @@
             <!-- ******nav****** -->
             <div class="overlay"></div>
             <nav class="navbar navbar-default navbar-static-top">
-                <div class="logo"><a href="index.html"><img src="images/logo_black.png" class="img-responsive"></a></div>
-                <div class="rqcode hidden-xs"><img src="images/rqcode.png" class="img-responsive"></div>
                 <div class="container-fluid">
+                    <div class="logo"><a href="index.html"><img src="images/logo_black.png" class="img-responsive"></a>
+                    </div>
+                    <div class="rqcode hidden-xs"><img src="images/rqcode.png" class="img-responsive"></div>
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="offcanvas">
                             <span class="sr-only"></span>
@@ -69,22 +71,40 @@
 
     <!-- ******main****** -->
     <div id="main">
-        <div class="section">
-            <div class="container-fluid moreBrands02 h-pt">
+        <div class="section animated fadeIn delay-04s">
+            <div class="container productDetail" style="padding-top: 5vw;">
                 <div class="row">
-                    <div class="col-md-5 animated zoomIn">
-                        <div class="logo01"><img src="images/morebrands02_logo01.png" class="img-responsive"></div>
-                        <div class="logo02"><img src="images/morebrands02_logo02.png" class="img-responsive"></div>
-                        <div class="text01">
-                            <p>为新时代消费者</p>
-                            <p>探索美好生活的时尚品牌</p>
-                        </div>
-                        <div class="text02">NEO SUPREME以其独有的品牌态度，带着对美好生活的探索，打造出别具一格的创意产品，不断为新世代年轻的消费者提供展现自我价值的消费舞台。
+                    <div class="col-sm-6">
+                        <div class="sp-loading"><img src="plugins/Smoothproducts/images/sp-loading.gif" alt=""><br>LOADING IMAGES</div>
+                        <div class="sp-wrap">
+                            <a href="images/shoes01_big.png"><img src="images/shoes01_big.png"></a>
+                            <a href="images/shoes02_big.png"><img src="images/shoes02_big.png"></a>
+                            <a href="images/shoes03_big.png"><img src="images/shoes03_big.png"></a>
+                            <a href="images/shoes01_big.png"><img src="images/shoes01_big.png"></a>
                         </div>
                     </div>
-                    <div class="col-md-7 animated zoomIn">
-                        <div class="image">
-                            <img src="images/morebrands02_img.png" class="img-responsive">
+                    <div class="col-sm-6">
+                        <div class="right-text">
+                            <div class="name">NIKE AIR MAX 270 REACT</div>
+                            <div class="description">MEN'S SHOE</div>
+                            <div class="price">￥699</div>
+                            <ul class="color">
+                                <li><i style="background:#c00"></i></li>
+                                <li><i style="background:#fff"></i></li>
+                                <li><i style="background:#000"></i></li>
+                            </ul>
+                            <ul class="size">
+                                <li>36</li>
+                                <li>37</li>
+                                <li>38</li>
+                                <li>39</li>
+                                <li>40</li>
+                                <li>41</li>
+                            </ul>
+                            <div class="content">
+                                <div class="title">设计说明：</div>
+                                <p>NIKE AIR MAX 270 REACTMENS SHOENIKE AIR MAX 270 REACT MEN'S SHOENIKE AIR MAX 270 REACTMEN'S SOENIKE AIR MAX 270 REACT MEN'S SHOE</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -96,14 +116,45 @@
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="plugins/fullpage/fullpage.js"></script>
+    <script type="text/javascript" src="plugins/Smoothproducts/js/smoothproducts.min.js"></script>
     <script type="text/javascript" src="js/offcanvas.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <script>
         $(function () {
             $('#main').fullpage({
-                anchors: ['moreBrands02'],
+                anchors: ['product'],
+                autoScrolling: false,
+                css3: true,
+                fitToSection: false,
                 // lockAnchors:true
             });
+            // 图片放大
+            $('.sp-wrap').smoothproducts();
+
+            //获取url中的参数
+            function getUrlParam(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+                var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+                if (r != null) return unescape(r[2]); return null; //返回参数值
+            }
+            //接收URL中的参数booksId
+            var id = getUrlParam('id');
+            // console.log('id:' + id);
+            // $.ajax({
+            //     type: 'get',
+            //     url: 'data.json',
+            //     dataType: 'json',
+            //     success: function (res, status) {
+            //         $.each(res.books, function (idx, val) {
+            //             //根据id获取详情数据
+            //             if (id == val.id) {
+            //                 var str = "html位置";
+            //                 console.log('index:' + idx);
+            //             }
+            //             $('.booksDeatail').append(str);
+            //         });
+            //     }
+            // })
         });
     </script>
 </body>
