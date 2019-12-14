@@ -10,7 +10,7 @@ function isMobile() {
         }
     }
     var screen_width = window.screen.width;
-    var screen_height = window.screen.height;
+    // var screen_height = window.screen.height;
     //根据屏幕分辨率判断是否是手机
     if (screen_width < 750) {
         mobile_flag = true;

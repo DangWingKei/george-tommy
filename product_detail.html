@@ -72,15 +72,18 @@
     <!-- ******main****** -->
     <div id="main">
         <div class="section animated fadeIn delay-04s">
-            <div class="container productDetail" style="padding-top: 5vw;">
+            <div class="container productDetail">
                 <div class="row">
                     <div class="col-sm-6">
-                        <div class="sp-loading"><img src="plugins/Smoothproducts/images/sp-loading.gif" alt=""><br>LOADING IMAGES</div>
-                        <div class="sp-wrap">
-                            <a href="images/shoes01_big.png"><img src="images/shoes01_big.png"></a>
-                            <a href="images/shoes02_big.png"><img src="images/shoes02_big.png"></a>
-                            <a href="images/shoes03_big.png"><img src="images/shoes03_big.png"></a>
-                            <a href="images/shoes01_big.png"><img src="images/shoes01_big.png"></a>
+                        <div class="sp-body">
+                            <div class="sp-loading"><img src="plugins/Smoothproducts/images/sp-loading.gif" alt=""><br>LOADING IMAGES</div>
+                            <div class="sp-wrap">
+                                <a href="images/shoes01_big.png"><img src="images/shoes01_big.png"></a>
+                                <a href="images/shoes02_big.png"><img src="images/shoes02_big.png"></a>
+                                <a href="images/shoes03_big.png"><img src="images/shoes03_big.png"></a>
+                                <a href="images/shoes01_big.png"><img src="images/shoes01_big.png"></a>
+                                <a href="images/shoes02_big.png"><img src="images/shoes02_big.png"></a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -121,12 +124,13 @@
     <script type="text/javascript" src="js/custom.js"></script>
     <script>
         $(function () {
+            var viewWidth = isMobile() ? '50px':"100px";
             $('#main').fullpage({
-                anchors: ['product'],
+                anchors: ['productDetail'],
                 autoScrolling: false,
                 css3: true,
                 fitToSection: false,
-                // lockAnchors:true
+                paddingTop:viewWidth
             });
             // 图片放大
             $('.sp-wrap').smoothproducts();

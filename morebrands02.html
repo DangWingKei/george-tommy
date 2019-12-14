@@ -70,7 +70,7 @@
     <!-- ******main****** -->
     <div id="main">
         <div class="section">
-            <div class="container-fluid moreBrands02 h-pt">
+            <div class="container moreBrands02">
                 <div class="row">
                     <div class="col-md-5 animated zoomIn">
                         <div class="logo01"><img src="images/morebrands02_logo01.png" class="img-responsive"></div>
@@ -79,7 +79,8 @@
                             <p>为新时代消费者</p>
                             <p>探索美好生活的时尚品牌</p>
                         </div>
-                        <div class="text02">NEO SUPREME以其独有的品牌态度，带着对美好生活的探索，打造出别具一格的创意产品，不断为新世代年轻的消费者提供展现自我价值的消费舞台。
+                        <div class="text02">
+                            <p>NEO SUPREME以其独有的品牌态度，带着对美好生活的探索，打造出别具一格的创意产品，不断为新世代年轻的消费者提供展现自我价值的消费舞台。</p>
                         </div>
                     </div>
                     <div class="col-md-7 animated zoomIn">
@@ -100,9 +101,12 @@
     <script type="text/javascript" src="js/custom.js"></script>
     <script>
         $(function () {
+            var viewWidth = isMobile() ? '50px':"100px";
             $('#main').fullpage({
                 anchors: ['moreBrands02'],
-                // lockAnchors:true
+                autoScrolling: false,
+                paddingTop:viewWidth,
+                lockAnchors:true
             });
         });
     </script>
