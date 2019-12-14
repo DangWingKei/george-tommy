@@ -70,21 +70,19 @@
     <!-- ******main****** -->
     <div id="main">
         <div class="section">
-            <div class="container-fluid moreBrands01 h-pt">
+            <div class="container moreBrands01">
                 <div class="row">
-                    <div class="col-md-3 animated fadeInLeft">
+                    <div class="col-md-4 animated fadeInLeft">
                         <div class="logo01"><img src="images/morebrands01_logo01.png" class="img-responsive"></div>
                         <div class="logo02"><img src="images/morebrands01_logo02.png" class="img-responsive"></div>
-                        <div class="text01">
-                            #人性本潮#
-                        </div>
+                        <div class="text01">#人性本潮#</div>
                         <div class="text02">
                             <p>不跟随，不雷同</p>
-                            <p>有自己热爱的兴趣!他们做自己的潮流</p>
-                            <p>每一个人， 生来就是自己的潮流!</p>
+                            <p>有自己热爱的兴趣！他们做自己的潮流</p>
+                            <p>每一个人，生来就是自己的潮流！</p>
                         </div>
                     </div>
-                    <div class="col-md-9 animated fadeInRight">
+                    <div class="col-md-8 animated fadeInRight">
                         <div class="video">
                             <video controls>
                                 <source src="video/video.mp4" type="video/mp4">
@@ -104,9 +102,12 @@
     <script type="text/javascript" src="js/custom.js"></script>
     <script>
         $(function () {
+            var viewWidth = isMobile() ? '50px':"100px";
             $('#main').fullpage({
                 anchors: ['moreBrands01'],
-                // lockAnchors:true
+                autoScrolling: false,
+                paddingTop:viewWidth,
+                lockAnchors:true
             });
         });
     </script>

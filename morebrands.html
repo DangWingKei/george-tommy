@@ -75,10 +75,10 @@
                     <p>打造覆盖式潮流频道</p>
                 </div>
                 <ul class="row animated fadeInUp">
-                    <li class="col-xs-6 col-md-3"><a href="morebrands01.html"><span>>>查看更多</span><img src="images/brands_img01.png"class="img-responsive"></a></li>
-                    <li class="col-xs-6 col-md-3"><a href="morebrands04.html"><span>>>查看更多</span><img src="images/brands_img04.png"class="img-responsive"></a></li>
-                    <li class="col-xs-6 col-md-3"><a href="morebrands02.html"><span>>>查看更多</span><img src="images/brands_img02.png"class="img-responsive"></a></li>
-                    <li class="col-xs-6 col-md-3"><a href="morebrands03.html"><span>>>查看更多</span><img src="images/brands_img03.png"class="img-responsive"></a></li>
+                    <li class="col-md-3"><a href="morebrands01.html"><span>>>查看更多</span><img src="images/brands_img01.png"class="img-responsive"></a></li>
+                    <li class="col-md-3"><a href="morebrands04.html"><span>>>查看更多</span><img src="images/brands_img04.png"class="img-responsive"></a></li>
+                    <li class="col-md-3"><a href="morebrands02.html"><span>>>查看更多</span><img src="images/brands_img02.png"class="img-responsive"></a></li>
+                    <li class="col-md-3"><a href="morebrands03.html"><span>>>查看更多</span><img src="images/brands_img03.png"class="img-responsive"></a></li>
                 </ul>
             </div>
         </div>
@@ -92,10 +92,12 @@
     <script type="text/javascript" src="js/custom.js"></script>
     <script>
         $(function () {
+            var viewWidth = isMobile() ? '50px':"100px";
             $('#main').fullpage({
                 anchors: ['moreBrands'],
                 autoScrolling: false,
-                // lockAnchors:true
+                paddingTop:viewWidth,
+                lockAnchors:true
             });
         });
     </script>

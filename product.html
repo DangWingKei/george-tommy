@@ -90,12 +90,13 @@
     <script type="text/javascript" src="js/custom.js"></script>
     <script>
         $(function () {
+            var viewWidth = isMobile() ? '50px':"100px";
             $('#main').fullpage({
                 anchors: ['product'],
                 autoScrolling: false,
                 css3: true,
                 fitToSection: false,
-                // lockAnchors:true
+                paddingTop:viewWidth
             });
             $.ajax({
                 type: 'get',

@@ -70,12 +70,14 @@
     <!-- ******main****** -->
     <div id="main">
         <div class="section">
-            <div class="container-fluid moreBrands04 h-pt">
+            <div class="container moreBrands04">
                 <div class="row">
                     <div class="col-md-4 animated zoomIn">
                         <div class="logo01"><img src="images/morebrands04_logo01.png" class="img-responsive"></div>
                         <div class="text01"></div>
-                        <div class="text02">中指猫是一个颇具魔性的街头服饰品牌，来自于美国弗罗里达。其标志是竖着中指的白色猫咪，上市后深得各大明星潮人的喜爱，中指猫作为特色创意出色的潮流品牌，凭借恶搞的LOGO迅速走红潮流界。它是喜剧和艺术的交汇点，已经发展成为具有象征意义的独特声音。</div>
+                        <div class="text02">
+                            <p>中指猫是一个颇具魔性的街头服饰品牌，来自于美国弗罗里达。其标志是竖着中指的白色猫咪，上市后深得各大明星潮人的喜爱，中指猫作为特色创意出色的潮流品牌，凭借恶搞的LOGO迅速走红潮流界。它是喜剧和艺术的交汇点，已经发展成为具有象征意义的独特声音。</p>
+                        </div>
                     </div>
                     <div class="col-md-8 animated zoomIn">
                         <div class="image">
@@ -95,9 +97,12 @@
     <script type="text/javascript" src="js/custom.js"></script>
     <script>
         $(function () {
+            var viewWidth = isMobile() ? '50px':"100px";
             $('#main').fullpage({
                 anchors: ['moreBrands04'],
-                // lockAnchors:true
+                autoScrolling: false,
+                paddingTop:viewWidth,
+                lockAnchors:true
             });
         });
     </script>

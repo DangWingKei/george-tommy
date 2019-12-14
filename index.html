@@ -22,11 +22,15 @@
             <div class="container-fluid home-nav">
                 <div class="row">
                     <ul>
-                        <li class="cbg"><a href="index.html" id="nav_homePage">T<i>HE HOME PAGE /<span>首页</span></i></a></li>
+                        <li class="cbg"><a href="index.html" id="nav_homePage">T<i>HE HOME PAGE /<span>首页</span></i></a>
+                        </li>
                         <li class="cbg"><a href="product.html" id="nav_product">P<i>RODUCT /<span>产品</span></i></a></li>
-                        <li class="cbg"><a href="morebrands.html" id="nav_moreBrands">M<i>ORE BRANDS /<span>更多产品</span></i></a></li>
-                        <li class="cbg"><a href="aboutUs.html" id="nav_aboutUs">A<i>BOUT US /<span>关于我们</span></i></a></li>
-                        <li class="cbg"><a href="contactUs.html" id="nav_contactUs">C<i>ONTACT US /<span>联系我们</span></i></a>
+                        <li class="cbg"><a href="morebrands.html" id="nav_moreBrands">M<i>ORE BRANDS
+                                    /<span>更多产品</span></i></a></li>
+                        <li class="cbg"><a href="aboutUs.html" id="nav_aboutUs">A<i>BOUT US /<span>关于我们</span></i></a>
+                        </li>
+                        <li class="cbg"><a href="contactUs.html" id="nav_contactUs">C<i>ONTACT US
+                                    /<span>联系我们</span></i></a>
                         </li>
                     </ul>
                     <div class="site-name"></div>
@@ -34,24 +38,45 @@
             </div>
         </div>
     </div>
+    <div class="loading hidden-xs">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar">0%</div>
+        </div>
+    </div>
+    </div>
+    </div>
     <!-- ******footer****** -->
     <!-- Javascript -->
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/preload.js"></script>
     <script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <script>
-            $(function () {
-                    // Home页面导航按钮切换背景
-                    var mobile_flag = isMobile();
-                    if (!mobile_flag) {
-                        $('.home-nav .cbg a').hover(
-                            function () {
-                                $(this).parents('.home-nav').addClass('contrary').css({ 'background': 'url(images/' + ($(this).attr('id')) + '.jpg) left top no-repeat', 'background-size': '100%' })
-                            }, function () {
-                                $(this).parents('.home-nav').removeClass('contrary').css({ 'background': '#fff' })
-                            })
+        $(function () {
+            var mobile_flag = isMobile();
+            if (!mobile_flag) {
+                // 背景图预加载
+                var imgs = ['images/nav_homePage.jpg', 'images/nav_product.jpg', 'images/nav_moreBrands.jpg', 'images/nav_aboutUs.jpg', 'images/nav_contactUs.jpg'];
+                var index = 0, len = imgs.length, progress = $('.progress-bar');
+                $.preload(imgs, {
+                    each: function (count) {
+                        var precent = Math.round((count + 1) / len * 100) + '%'
+                        progress.html(precent).css("width", precent)
+                    },
+                    end: function () {
+                        $('.loading').hide()
+                        // setTimeout(function () {}, 1000);
                     }
                 });
+                // 鼠标经过显示背景图
+                $('.home-nav .cbg a').hover(
+                    function () {
+                        $(this).parents('.home-nav').addClass('contrary').css({ 'background': 'url(images/' + ($(this).attr('id')) + '.jpg) left top no-repeat', 'background-size': '100%' })
+                    }, function () {
+                        $(this).parents('.home-nav').removeClass('contrary').css({ 'background': '#fff' })
+                    })
+            }
+        });
     </script>
 </body>
 

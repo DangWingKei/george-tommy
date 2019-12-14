@@ -70,9 +70,9 @@
     <!-- ******main****** -->
     <div id="main">
         <div class="section">
-            <div class="container-fluid aboutus h-pt">
+            <div class="container aboutus">
                 <div class="row">
-                    <div class="col-md-4 animated fadeInLeft">
+                    <div class="col-md-6 animated fadeInLeft">
                         <div class="title"><strong>公司介绍</strong>
                             <p>/ COMPANY INTRODUCTION</p>
                         </div>
@@ -84,7 +84,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-8 animated fadeInRight">
+                    <div class="col-md-6 animated fadeInRight">
                         <div class="video">
                             <video controls>
                                 <source src="video/video.mp4" type="video/mp4">
@@ -104,10 +104,13 @@
     <script type="text/javascript" src="js/custom.js"></script>
     <script>
         $(function () {
+            var viewWidth = isMobile() ? '50px':"100px";
             $('#main').fullpage({
                 anchors: ['aboutUs'],
-                // lockAnchors:true
-            })
+                autoScrolling: false,
+                paddingTop:viewWidth,
+                lockAnchors:true
+            });
         });
     </script>
 </body>

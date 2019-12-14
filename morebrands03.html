@@ -70,7 +70,7 @@
     <!-- ******main****** -->
     <div id="main">
         <div class="section">
-            <div class="container-fluid moreBrands03 h-pt">
+            <div class="container moreBrands03">
                 <div class="row">
                     <div class="col-md-4 animated zoomIn">
                         <div class="logo01"><img src="images/morebrands03_logo01.png" class="img-responsive"></div>
@@ -79,7 +79,9 @@
                             <p>以独特街舞潮流文特点</p>
                             <p>散发的高街运动潮牌</p>
                         </div>
-                        <div class="text02">GENANX闪电潮牌，一个致力于为年轻人提供个性、小众、有设计感的潮流品牌。它以“力量、激情、创新、颠覆”为精神，不断打造不甘平庸的积极生活态度，成为年轻人敢做自己的信念图腾。</div>
+                        <div class="text02">
+                            <p>GENANX闪电潮牌，一个致力于为年轻人提供个性、小众、有设计感的潮流品牌。它以“力量、激情、创新、颠覆”为精神，不断打造不甘平庸的积极生活态度，成为年轻人敢做自己的信念图腾。</p>
+                        </div>
                     </div>
                     <div class="col-md-8 animated zoomIn">
                         <div class="image">
@@ -99,9 +101,12 @@
     <script type="text/javascript" src="js/custom.js"></script>
     <script>
         $(function () {
+            var viewWidth = isMobile() ? '50px':"100px";
             $('#main').fullpage({
                 anchors: ['moreBrands03'],
-                // lockAnchors:true
+                autoScrolling: false,
+                paddingTop:viewWidth,
+                lockAnchors:true
             });
         });
     </script>
