@@ -4,95 +4,95 @@
     "cid": "clothes",
     "name": "耐克运动服合成纤维填充",
     "price": "1299",
-    "description": "Nike Sportswear Synthetic Fill Jacket",
-    "img": "images/clothes01.png"
+    "desc": "Nike Sportswear Synthetic Fill Jacket",
+    "img": "images/clothes01_big.png",
   },
   {
     "id":"2",
     "cid": "clothes",
     "name": "耐克运动服合成纤维填充",
     "price": "199",
-    "description": "Nike Sportswear Synthetic Fill Jacket",
-    "img": "images/clothes02.png"
+    "desc": "Nike Sportswear Synthetic Fill Jacket",
+    "img": "images/clothes02_big.png"
   },
   {
     "id":"3",
     "cid": "clothes",
     "name": "耐克运动服",
     "price": "599",
-    "description": "女士漏斗领1/2拉链上衣",
-    "img": "images/clothes03.png"
+    "desc": "女士漏斗领1/2拉链上衣",
+    "img": "images/clothes03_big.png"
   },
   {
     "id":"4",
     "cid": "clothes",
     "name": "耐克运动服合成纤维填充",
     "price": "1299",
-    "description": "Nike Sportswear Synthetic Fill Jacket",
-    "img": "images/clothes01.png"
+    "desc": "Nike Sportswear Synthetic Fill Jacket",
+    "img": "images/clothes01_big.png"
   },
   {
     "id":"5",
     "cid": "clothes",
     "name": "耐克运动服合成纤维填充",
     "price": "199",
-    "description": "Nike Sportswear Synthetic Fill Jacket",
-    "img": "images/clothes02.png"
+    "desc": "Nike Sportswear Synthetic Fill Jacket",
+    "img": "images/clothes02_big.png"
   },
   {
     "id":"6",
     "cid": "clothes",
     "name": "耐克运动服",
     "price": "599",
-    "description": "女士漏斗领1/2拉链上衣",
-    "img": "images/clothes03.png"
+    "desc": "女士漏斗领1/2拉链上衣",
+    "img": "images/clothes03_big.png"
   },
   {
     "id":"7",
     "cid": "shoes",
     "name": "Nike Air Max 270 React",
     "price": "699",
-    "description": "Men's Shoe",
-    "img": "images/shoes01.png"
+    "desc": "Men's Shoe",
+    "img": "images/shoes01_big.png"
   },
   {
     "id":"8",
     "cid": "shoes",
     "name": "Nike Air Force 1 Mid '07",
     "price": "499",
-    "description": "Men's Shoe",
-    "img": "images/shoes02.png"
+    "desc": "Men's Shoe",
+    "img": "images/shoes02_big.png"
   },
   {
     "id":"9",
     "cid": "shoes",
     "name": "Nike Air Force 1",
     "price": "459",
-    "description": "Men's Shoe",
-    "img": "images/shoes03.png"
+    "desc": "Men's Shoe",
+    "img": "images/shoes03_big.png"
   },
   {
     "id":"10",
     "cid": "shoes",
     "name": "Nike Air Max 270 React",
     "price": "699",
-    "description": "Men's Shoe",
-    "img": "images/shoes01.png"
+    "desc": "Men's Shoe",
+    "img": "images/shoes01_big.png"
   },
   {
     "id":"11",
     "cid": "shoes",
     "name": "Nike Air Force 1 Mid '07",
     "price": "499",
-    "description": "Men's Shoe",
-    "img": "images/shoes02.png"
+    "desc": "Men's Shoe",
+    "img": "images/shoes02_big.png"
   },
   {
     "id":"12",
     "cid": "shoes",
     "name": "Nike Air Force 1",
     "price": "459",
-    "description": "Men's Shoe",
-    "img": "images/shoes03.png"
+    "desc": "Men's Shoe",
+    "img": "images/shoes03_big.png"
   }
 ]
