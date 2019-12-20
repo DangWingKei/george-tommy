@@ -19,7 +19,7 @@
     <!-- ******main****** -->
     <div id="main">
         <div class="section">
-            <div class="container-fluid home-nav">
+            <div class="container-fluid home-nav contrary">
                 <div class="row">
                     <ul>
                         <li class="cbg"><a href="index.html" id="nav_homePage">T<i>HE HOME PAGE /<span>首页</span></i></a>
@@ -54,28 +54,55 @@
     <script>
         $(function () {
             var mobile_flag = isMobile();
-            if (!mobile_flag) {
-                // 背景图预加载
-                var imgs = ['images/nav_homePage.jpg', 'images/nav_product.jpg', 'images/nav_moreBrands.jpg', 'images/nav_aboutUs.jpg', 'images/nav_contactUs.jpg'];
-                var index = 0, len = imgs.length, progress = $('.progress-bar');
-                $.preload(imgs, {
-                    each: function (count) {
-                        var precent = Math.round((count + 1) / len * 100) + '%'
-                        progress.html(precent).css("width", precent)
-                    },
-                    end: function () {
-                        $('.loading').hide()
-                        // setTimeout(function () {}, 1000);
-                    }
-                });
-                // 鼠标经过显示背景图
-                $('.home-nav .cbg a').hover(
-                    function () {
-                        $(this).parents('.home-nav').addClass('contrary').css({ 'background': 'url(images/' + ($(this).attr('id')) + '.jpg) left top no-repeat', 'background-size': '100%' })
-                    }, function () {
-                        $(this).parents('.home-nav').removeClass('contrary').css({ 'background': '#fff' })
-                    })
+            var imgs
+            if (mobile_flag) {
+                imgs = ['images/nav_homePage_m.jpg', 'images/nav_product_m.jpg', 'images/nav_moreBrands_m.jpg', 'images/nav_aboutUs_m.jpg', 'images/nav_contactUs_m.jpg'];
+            }else if(!mobile_flag){
+                imgs = ['images/nav_homePage.jpg', 'images/nav_product.jpg', 'images/nav_moreBrands.jpg', 'images/nav_aboutUs.jpg', 'images/nav_contactUs.jpg'];
             }
+
+
+            // 背景图预加载
+            var index = 0, len = imgs.length, progress = $('.progress-bar');
+            $.preload(imgs, {
+                each: function (count) {
+                    var precent = Math.round((count + 1) / len * 100) + '%'
+                    progress.html(precent).css("width", precent)
+                },
+                end: function () {
+                    $('.loading').hide()
+                    // setTimeout(function () {}, 1000);
+                }
+            });
+            // 设置背景图
+            $('.home-nav').css({ 'background': 'url(' + imgs[0] + ') left top no-repeat', 'background-size': '100%' });
+            var i = 0;
+            var timer;
+            // 设定图片轮播
+            function acbg() {
+                i++;
+                if (i > imgs.length - 1) {
+                    i = 0
+                }
+                $('.home-nav').css({ 'background': 'url(' + imgs[i] + ') left top no-repeat', 'background-size': '100%' });
+            }
+            // 添加轮播定时器
+            timer = setInterval(function () { acbg() }, 3000);
+            // 鼠标经过显示背景图
+            $('.home-nav .cbg a').hover(
+                function () {
+                    // 清除轮播定时器
+                    clearInterval(timer);
+                    // 鼠标经过显示对应图片
+                    if (mobile_flag) {
+                        $(this).parents('.home-nav').css({ 'background': 'url(images/' + ($(this).attr('id')) + '_m.jpg) left top no-repeat', 'background-size': '100%' })
+                    }else if(!mobile_flag){
+                        $(this).parents('.home-nav').css({ 'background': 'url(images/' + ($(this).attr('id')) + '.jpg) left top no-repeat', 'background-size': '100%' })
+                    }
+                }, function () {
+                    // 重新添加轮播定时器
+                    timer = setInterval(function () { acbg() }, 3000);
+                });
         });
     </script>
 </body>
